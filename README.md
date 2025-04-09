@@ -1,6 +1,6 @@
 # React + Vite
 
-Open [Link to exercise](Open [Link to exercise](https://users.metropolia.fi/~samuelms/WebExercises/routing/) to view it in the browser.) to view it in the browser.
+Open [Link to exercise](https://users.metropolia.fi/~samuelms/WebExercises/hooks/) to view it in the browser.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
