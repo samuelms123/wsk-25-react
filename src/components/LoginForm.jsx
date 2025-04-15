@@ -2,20 +2,23 @@ import useForm from '../hooks/formHooks';
 import {useAuthentication} from '../hooks/apiHooks';
 import {useNavigate} from 'react-router';
 import RegisterForm from './RegisterForm';
+import {UserProvider} from '../contexts/UserContext';
+import {useUserContext} from '../hooks/contextHooks';
 
 // LoginForm.jsx
 const LoginForm = () => {
-  const {postLogin} = useAuthentication();
-  const navigate = useNavigate();
+  const {handleLogin} = useUserContext();
   const initValues = {
     username: '',
     password: '',
   };
 
   const doLogin = async () => {
-    console.log(inputs);
-    await postLogin(inputs);
-    navigate('/');
+    try {
+      await handleLogin(inputs);
+    } catch (e) {
+      alert(e.message);
+    }
   };
 
   const {inputs, handleInputChange, handleSubmit} = useForm(
