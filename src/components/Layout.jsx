@@ -17,13 +17,15 @@ const Layout = () => {
             <li>
               <Link to="/upload">Upload</Link>
             </li>
+            <li>
+              <Link to="/login">Log in</Link>
+            </li>
           </ul>
         </nav>
         <main>
           <Outlet />
         </main>
       </div>
-      ;
     </>
   );
 };
