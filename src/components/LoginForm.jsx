@@ -1,9 +1,8 @@
 import useForm from '../hooks/formHooks';
-import {useAuthentication} from '../hooks/apiHooks';
-import {useNavigate} from 'react-router';
 import RegisterForm from './RegisterForm';
 import {UserProvider} from '../contexts/UserContext';
 import {useUserContext} from '../hooks/contextHooks';
+import TextInput from './ui/TextInput';
 
 // LoginForm.jsx
 const LoginForm = () => {
