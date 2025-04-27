@@ -48,7 +48,22 @@ const useMedia = () => {
     );
   };
 
-  return {mediaArray, postMedia};
+  const deleteMedia = async (id, token) => {
+    const fetchOptions = {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer: ' + token,
+        'Content-Type': 'application/json',
+      },
+    };
+    return await fetchData(
+      `${import.meta.env.VITE_MEDIA_API}/media/${id}`,
+      fetchOptions,
+    );
+  };
+  // ADD UPDATE MEDIA
+
+  return {mediaArray, postMedia, deleteMedia};
 };
 
 const useAuthentication = () => {

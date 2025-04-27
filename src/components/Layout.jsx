@@ -13,25 +13,51 @@ const Layout = () => {
     <>
       <div>
         <nav>
-          <ul>
+          <h1 className="mb-4 text-4xl">My app</h1>
+          <ul className="mb-4 flex justify-end overflow-hidden rounded bg-stone-900 p-2">
             <li>
-              <Link to="/">Home</Link>
+              <Link
+                className="ml-2 block rounded p-4 text-center text-stone-50 transition duration-300 hover:bg-stone-600"
+                to="/"
+              >
+                Home
+              </Link>
             </li>
             {user ? (
               <>
                 <li>
-                  <Link to="/profile">Profile</Link>
+                  <Link
+                    className="ml-2 block rounded p-4 text-center text-stone-50 transition duration-300 hover:bg-stone-600"
+                    to="/profile"
+                  >
+                    Profile
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/upload">Upload</Link>
+                  <Link
+                    className="ml-2 block rounded p-4 text-center text-stone-50 transition duration-300 hover:bg-stone-600"
+                    to="/upload"
+                  >
+                    Upload
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/logout">Log out</Link>
+                  <Link
+                    className="ml-2 block rounded p-4 text-center text-stone-50 transition duration-300 hover:bg-stone-600"
+                    to="/logout"
+                  >
+                    Log out
+                  </Link>
                 </li>
               </>
             ) : (
               <li>
-                <Link to="/login">Log in</Link>
+                <Link
+                  className="ml-2 block rounded p-4 text-center text-stone-50 transition duration-300 hover:bg-stone-600"
+                  to="/login"
+                >
+                  Log in
+                </Link>
               </li>
             )}
           </ul>
